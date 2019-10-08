@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace BinaryCalc
@@ -13,11 +9,13 @@ namespace BinaryCalc
         public MainForm()
         {
             InitializeComponent();
-            
         }
 
-        bool mouseDown;
-        Point lastLocation;
+        //Moving Form
+        private bool mouseDown;
+        private Point lastLocation;
+        //*
+
         private void MainForm_Load(object sender, EventArgs e)
         {
             Calculus.Term variableA = new Calculus.Term();
@@ -26,17 +24,15 @@ namespace BinaryCalc
             variableA.denary = 0; variableB.denary = 0; variableC.denary = 0;
             variableA.RefreshBy(10); variableB.RefreshBy(10); variableC.RefreshBy(10);
 
-            A0.Text = "0";
+            A15.Text = "0";
         }
 
         private void flatTop_Click(object sender, EventArgs e)
         {
-
         }
 
         private void Abinary15_TextChanged(object sender, EventArgs e)
         {
-                
         }
 
         private void flatTop_MouseDown(object sender, MouseEventArgs e)
@@ -61,38 +57,16 @@ namespace BinaryCalc
             mouseDown = false;
         }
 
-        private void binaryA0_MouseClick(object sender, MouseEventArgs e)
+        private void ButtonSwitcher(object sender, EventArgs e)
         {
-            Button binaryA0 = sender as Button;
-            if (binaryA0 != null)
+            Button clickedButton = (Button)sender;
+            if (clickedButton.Text == "0")
             {
-                if (binaryA0.Text == "0")
-                {
-                    string A0 = "1";
-                    binaryA0.Text = A0;
-                }
-                else
-                {
-                    string A0 = "0";
-                    binaryA0.Text = A0;
-                }
-            }
-
-            
-        }
-
-        private void A0_Click(object sender, EventArgs e)
-        {
-            Button A0 = sender as Button;
-            if (A0.Text == "0")
-            {
-                string a0 = "1";
-                A0.Text = a0;
+                clickedButton.Text = "1";
             }
             else
             {
-                string a0 = "0";
-                A0.Text = a0;
+                clickedButton.Text = "0";
             }
         }
     }

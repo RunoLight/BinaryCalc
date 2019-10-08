@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace BinaryCalc
 {
@@ -28,11 +26,14 @@ namespace BinaryCalc
                     case 2:
                         denary = Convert.ToInt32(binary, 2);
                         break;
+
                     case 8:
                         denary = Convert.ToInt32(octal, 8);
                         break;
+
                     case 10:
                         break;
+
                     case 16:
                         denary = Convert.ToInt32(hexadecimal, 16);
                         break;
@@ -43,7 +44,7 @@ namespace BinaryCalc
                 hexadecimal = Convert.ToString(denary, 16);
             }
 
-            static public Term operator+(Term var1, Term var2)
+            static public Term operator +(Term var1, Term var2)
             {
                 Term var3 = new Term
                 {
@@ -52,7 +53,8 @@ namespace BinaryCalc
                 var3.RefreshBy(10);
                 return var3;
             }
-            static public Term operator-(Term var1, Term var2)
+
+            static public Term operator -(Term var1, Term var2)
             {
                 Term var3 = new Term
                 {
@@ -61,7 +63,8 @@ namespace BinaryCalc
                 var3.RefreshBy(10);
                 return var3;
             }
-            static public Term operator*(Term var1, Term var2)
+
+            static public Term operator *(Term var1, Term var2)
             {
                 Term var3 = new Term
                 {
@@ -70,7 +73,8 @@ namespace BinaryCalc
                 var3.RefreshBy(10);
                 return var3;
             }
-            static public Term operator/(Term var1, Term var2)
+
+            static public Term operator /(Term var1, Term var2)
             {
                 Term var3 = new Term
                 {
@@ -79,6 +83,7 @@ namespace BinaryCalc
                 var3.RefreshBy(10);
                 return var3;
             }
+
             static public Term operator |(Term var1, Term var2)
             {
                 Term var3 = new Term
@@ -88,6 +93,7 @@ namespace BinaryCalc
                 var3.RefreshBy(10);
                 return var3;
             }
+
             static public Term operator ^(Term var1, Term var2)
             {
                 Term var3 = new Term
@@ -97,6 +103,7 @@ namespace BinaryCalc
                 var3.RefreshBy(10);
                 return var3;
             }
+
             static public Term operator ~(Term var1)
             {
                 Term var2 = new Term
@@ -106,6 +113,7 @@ namespace BinaryCalc
                 var2.RefreshBy(10);
                 return var2;
             }
+
             static public Term operator >>(Term var1, int var2)
             {
                 Term var3 = new Term
@@ -115,6 +123,7 @@ namespace BinaryCalc
                 var3.RefreshBy(10);
                 return var3;
             }
+
             static public Term operator <<(Term var1, int var2)
             {
                 Term var3 = new Term
@@ -125,7 +134,5 @@ namespace BinaryCalc
                 return var3;
             }
         }
-
-
     }
 }

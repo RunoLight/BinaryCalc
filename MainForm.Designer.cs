@@ -36,7 +36,8 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.A0 = new System.Windows.Forms.Button();
+            this.A15 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             // 
             // flatTop
             // 
@@ -126,20 +127,35 @@
             this.textBox2.Text = "0";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // A0
+            // A15
             // 
-            this.A0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(111)))), ((int)(((byte)(166)))));
-            this.A0.FlatAppearance.BorderSize = 0;
-            this.A0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.A0.Font = new System.Drawing.Font("Artifakt Element", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.A0.ForeColor = System.Drawing.Color.White;
-            this.A0.Location = new System.Drawing.Point(9, 36);
-            this.A0.Name = "A0";
-            this.A0.Size = new System.Drawing.Size(50, 50);
-            this.A0.TabIndex = 2;
-            this.A0.Text = "0";
-            this.A0.UseVisualStyleBackColor = false;
-            this.A0.Click += new System.EventHandler(this.A0_Click);
+            this.A15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(111)))), ((int)(((byte)(166)))));
+            this.A15.FlatAppearance.BorderSize = 0;
+            this.A15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.A15.Font = new System.Drawing.Font("Artifakt Element", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.A15.ForeColor = System.Drawing.Color.White;
+            this.A15.Location = new System.Drawing.Point(9, 36);
+            this.A15.Name = "A15";
+            this.A15.Size = new System.Drawing.Size(50, 50);
+            this.A15.TabIndex = 2;
+            this.A15.Text = "0";
+            this.A15.UseVisualStyleBackColor = false;
+            this.A15.Click += new System.EventHandler(this.ButtonSwitcher);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(111)))), ((int)(((byte)(166)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Artifakt Element", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(65, 36);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(50, 50);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "0";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.ButtonSwitcher);
             // 
             // MainForm
             // 
@@ -147,7 +163,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.A0);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.A15);
             this.Controls.Add(this.flatTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
@@ -167,6 +184,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox Abinary1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button A0;
+        private System.Windows.Forms.Button A15;
+        private System.Windows.Forms.Button button1;
     }
 }
