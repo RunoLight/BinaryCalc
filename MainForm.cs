@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace BinaryCalc
 {
-    public partial class Main : Form
+    public partial class MainForm : Form
     {
-        public Main()
+        public MainForm()
         {
             InitializeComponent();
         }

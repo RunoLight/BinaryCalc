@@ -1,6 +1,6 @@
 ﻿namespace BinaryCalc
 {
-    partial class Main
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Main";
+            this.Name = "MainForm";
+            this.Text = "Binary Calculator";
+
         }
 
         #endregion
