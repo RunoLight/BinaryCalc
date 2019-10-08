@@ -16,6 +16,10 @@ namespace BinaryCalc
         private Point lastLocation;
         //*
 
+        //Notation
+        int Notation = 10;
+        //*
+
         private void MainForm_Load(object sender, EventArgs e)
         {
             Calculus.Term variableA = new Calculus.Term();
@@ -24,14 +28,10 @@ namespace BinaryCalc
             variableA.denary = 0; variableB.denary = 0; variableC.denary = 0;
             variableA.RefreshBy(10); variableB.RefreshBy(10); variableC.RefreshBy(10);
 
-            A15.Text = "0";
+            Anotation.Text = Convert.ToString(Notation);
         }
 
         private void flatTop_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void Abinary15_TextChanged(object sender, EventArgs e)
         {
         }
 
@@ -60,6 +60,10 @@ namespace BinaryCalc
         private void ButtonSwitcher(object sender, EventArgs e)
         {
             Button clickedButton = (Button)sender;
+
+            if (clickedButton == null)
+                return;
+
             if (clickedButton.Text == "0")
             {
                 clickedButton.Text = "1";
@@ -68,6 +72,18 @@ namespace BinaryCalc
             {
                 clickedButton.Text = "0";
             }
+        }
+
+        private void SwitchNotation(object sender, EventArgs e)
+        {
+            if (Notation == 10)
+                Notation = 16;
+            else if (Notation == 16)
+                Notation = 8;
+            else if (Notation == 8)
+                Notation = 10;
+
+            Anotation.Text = Convert.ToString(Notation);
         }
     }
 }

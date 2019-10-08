@@ -44,6 +44,7 @@ namespace BinaryCalc
                 hexadecimal = Convert.ToString(denary, 16);
             }
 
+            #region operators
             static public Term operator +(Term var1, Term var2)
             {
                 Term var3 = new Term
@@ -133,6 +134,7 @@ namespace BinaryCalc
                 var3.RefreshBy(10);
                 return var3;
             }
+            #endregion operators
         }
     }
 }
