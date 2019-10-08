@@ -4,17 +4,16 @@ using System.Text;
 
 namespace BinaryCalc
 {
-    class Calculus
+    public class Calculus
     {
-
-        struct Term
+        public struct Term
         {
-            string binary; //2
-            string octal; //8
-            int denary; //10
-            string hexadecimal; //16
+            public string binary; //2
+            public string octal; //8
+            public int denary; //10
+            public string hexadecimal; //16
 
-            Term(string binary_, string octal_, int denary_, string hexademical_)
+            public Term(string binary_, string octal_, int denary_, string hexademical_)
             {
                 binary = binary_;
                 octal = octal_;

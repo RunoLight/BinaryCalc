@@ -35,7 +35,9 @@
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.binaryA0 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.Abinary15 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Abinary14 = new System.Windows.Forms.TextBox();
             // 
             // flatTop
             // 
@@ -48,6 +50,10 @@
             this.flatTop.Size = new System.Drawing.Size(800, 30);
             this.flatTop.TabIndex = 0;
             this.flatTop.UseVisualStyleBackColor = false;
+            this.flatTop.Click += new System.EventHandler(this.flatTop_Click);
+            this.flatTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.flatTop_MouseDown);
+            this.flatTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.flatTop_MouseMove);
+            this.flatTop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.flatTop_MouseUp);
             // 
             // button2
             // 
@@ -106,20 +112,51 @@
             this.textBox5.Text = "1";
             this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox3
+            // Abinary15
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(111)))), ((int)(((byte)(166)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBox3.Font = new System.Drawing.Font("Artifakt Element", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(6, 36);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox3.Size = new System.Drawing.Size(45, 45);
-            this.textBox3.TabIndex = 2;
-            this.textBox3.Text = "0";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Abinary15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(111)))), ((int)(((byte)(166)))));
+            this.Abinary15.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Abinary15.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Abinary15.Font = new System.Drawing.Font("Artifakt Element", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Abinary15.ForeColor = System.Drawing.Color.White;
+            this.Abinary15.Location = new System.Drawing.Point(6, 36);
+            this.Abinary15.Name = "Abinary15";
+            this.Abinary15.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Abinary15.Size = new System.Drawing.Size(45, 45);
+            this.Abinary15.TabIndex = 2;
+            this.Abinary15.Text = "0";
+            this.Abinary15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Abinary15.TextChanged += new System.EventHandler(this.Abinary15_TextChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(111)))), ((int)(((byte)(166)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.textBox1.Font = new System.Drawing.Font("Artifakt Element", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(57, 36);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBox1.Size = new System.Drawing.Size(45, 45);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.Text = "0";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Abinary14
+            // 
+            this.Abinary14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(111)))), ((int)(((byte)(166)))));
+            this.Abinary14.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Abinary14.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Abinary14.Font = new System.Drawing.Font("Artifakt Element", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Abinary14.ForeColor = System.Drawing.Color.White;
+            this.Abinary14.Location = new System.Drawing.Point(57, 36);
+            this.Abinary14.Name = "Abinary14";
+            this.Abinary14.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Abinary14.Size = new System.Drawing.Size(45, 45);
+            this.Abinary14.TabIndex = 2;
+            this.Abinary14.Text = "0";
+            this.Abinary14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // MainForm
             // 
@@ -127,7 +164,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.Abinary14);
+            this.Controls.Add(this.Abinary15);
             this.Controls.Add(this.binaryA0);
             this.Controls.Add(this.flatTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -146,6 +184,8 @@
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.TextBox binaryA0;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox Abinary15;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Abinary14;
     }
 }
