@@ -23,9 +23,10 @@ namespace BinaryCalc
             Calculus.Term variableA = new Calculus.Term();
             Calculus.Term variableB = new Calculus.Term();
             Calculus.Term variableC = new Calculus.Term();
-
             variableA.denary = 0; variableB.denary = 0; variableC.denary = 0;
             variableA.RefreshBy(10); variableB.RefreshBy(10); variableC.RefreshBy(10);
+
+            A0.Text = "0";
         }
 
         private void flatTop_Click(object sender, EventArgs e)
@@ -58,6 +59,41 @@ namespace BinaryCalc
         private void flatTop_MouseUp(object sender, MouseEventArgs e)
         {
             mouseDown = false;
+        }
+
+        private void binaryA0_MouseClick(object sender, MouseEventArgs e)
+        {
+            Button binaryA0 = sender as Button;
+            if (binaryA0 != null)
+            {
+                if (binaryA0.Text == "0")
+                {
+                    string A0 = "1";
+                    binaryA0.Text = A0;
+                }
+                else
+                {
+                    string A0 = "0";
+                    binaryA0.Text = A0;
+                }
+            }
+
+            
+        }
+
+        private void A0_Click(object sender, EventArgs e)
+        {
+            Button A0 = sender as Button;
+            if (A0.Text == "0")
+            {
+                string a0 = "1";
+                A0.Text = a0;
+            }
+            else
+            {
+                string a0 = "0";
+                A0.Text = a0;
+            }
         }
     }
 }
